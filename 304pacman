@@ -5,7 +5,14 @@ import sys
 
 
 def display(content, c1, c2):
+    if len(content) < 1:
+        print("The file is empty")
+        sys.exit(84)
+    size = len(content[0])
     for line in content:
+        if len(line) != size:
+            print("Malformated array : the lines must be of the same size")
+            sys.exit(84)
         for c in line:
             if c == '1':
                 sys.stdout.write(c1)
