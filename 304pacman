@@ -96,6 +96,7 @@ def main():
     c2 = sys.argv[3]
     if len(c1) != 1 or len(c2) != 1:
         print("c1 and c2 must be one character")
+        sys.exit(84)
     c1 = c1[0]
     c2 = c2[0]
     with open(sys.argv[1]) as file:
